@@ -1,0 +1,12 @@
+
+services:
+  plumber:
+    image: plumber_image_final:latest
+    container_name: plumber_container
+    restart: unless-stopped
+    ports:
+      - "8008:8008"
+    volumes:
+      - "/app"
+    env_file:
+      .Renviron
